@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 312004709}
   - component: {fileID: 312004710}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -195,7 +195,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -2413806693520163455, guid: a43295e90c0ca0f47ad3a7b4b54c2a9e, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
@@ -483,7 +483,8 @@ GameObject:
   - component: {fileID: 1071382073}
   - component: {fileID: 1071382072}
   - component: {fileID: 1071382071}
-  m_Layer: 0
+  - component: {fileID: 1071382075}
+  m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -499,7 +500,7 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 1071382070}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 482f1298f67f12b44aa3744b1e3660a1, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -538,7 +539,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xSpeed: 5
-  jumpForce: 300
+  jumpForce: 700
+  groundCheckRadius: 0.1
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!50 &1071382073
 Rigidbody2D:
   serializedVersion: 4
@@ -554,7 +559,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 4
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -565,7 +570,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!4 &1071382074
 Transform:
   m_ObjectHideFlags: 0
@@ -582,6 +587,19 @@ Transform:
   - {fileID: 1602580108}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1071382075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071382070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4a7caac26f9b1f41a8351a3e36afc9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 1071382073}
 --- !u!1 &1307879093
 GameObject:
   m_ObjectHideFlags: 0
@@ -592,7 +610,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1307879094}
   - component: {fileID: 1307879095}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Circle (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -654,7 +672,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -2413806693520163455, guid: a43295e90c0ca0f47ad3a7b4b54c2a9e, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
@@ -1427,7 +1445,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1602580108}
   - component: {fileID: 1602580109}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
