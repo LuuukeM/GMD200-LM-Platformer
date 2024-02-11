@@ -6,6 +6,8 @@ using UnityEngine;
 public class PlayerAnimation : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private Animator animator;
+    [SerializeField] private PlayerMovement playerMovement;
 
     private bool _facingRight = true;
 
@@ -24,6 +26,9 @@ public class PlayerAnimation : MonoBehaviour
         {
             Flip();
         }
+
+        animator.SetFloat("MoveSpeedX", Mathf.Abs(rb.velocity.x) / playerMovement.XSpeed);
+        animator.SetBool("Grounded", playerMovement.IsGrounded);
     }
 
     private void Flip()
