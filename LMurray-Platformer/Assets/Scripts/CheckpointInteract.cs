@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class CheckpointInteract : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private Renderer rend;
+
+    [SerializeField] private Color checkpointColor = Color.red;
+
+    private void Start()
     {
-        
+        rend = GetComponent<Renderer>();
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            rend.material.color = checkpointColor;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

@@ -354,6 +354,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawn: {fileID: 0}
+  Checkpoint: {fileID: 5595982045486813000, guid: 78c1cdce0817eae40a8aea1d0f54c6e6, type: 3}
+  checkpointColor: {r: 1, g: 0.3820755, b: 0.3820755, a: 1}
+  baseCheckpointColor: {r: 0.4764151, g: 1, b: 0.4764151, a: 1}
 --- !u!60 &7416585540206924850
 PolygonCollider2D:
   m_ObjectHideFlags: 0
