@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!4 &5776998 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5196410315612391, guid: 78c1cdce0817eae40a8aea1d0f54c6e6, type: 3}
-  m_PrefabInstance: {fileID: 8641890694290883164}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &77482928
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -242,6 +237,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d87544fb167fd54c97d0cf74d391c7c, type: 3}
+--- !u!1 &142945766 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5595982045486813000, guid: 78c1cdce0817eae40a8aea1d0f54c6e6, type: 3}
+  m_PrefabInstance: {fileID: 765544743}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &142945767 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5196410315612391, guid: 78c1cdce0817eae40a8aea1d0f54c6e6, type: 3}
+  m_PrefabInstance: {fileID: 765544743}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &148611330
 GameObject:
   m_ObjectHideFlags: 0
@@ -23215,11 +23220,11 @@ PrefabInstance:
     - target: {fileID: 3405085105832648756, guid: 051097652c85cee489649a897f61babc, type: 3}
       propertyPath: respawn
       value: 
-      objectReference: {fileID: 5776998}
+      objectReference: {fileID: 142945767}
     - target: {fileID: 3405085105832648756, guid: 051097652c85cee489649a897f61babc, type: 3}
       propertyPath: Checkpoint
       value: 
-      objectReference: {fileID: 5595982045486813000, guid: 78c1cdce0817eae40a8aea1d0f54c6e6, type: 3}
+      objectReference: {fileID: 142945766}
     - target: {fileID: 6034758515811600426, guid: 051097652c85cee489649a897f61babc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -53.38

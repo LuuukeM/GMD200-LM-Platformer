@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class PlayerRespawn : MonoBehaviour
 {
-    [SerializeField] private Transform respawn;
     public GameObject Checkpoint;
+    [SerializeField] private Transform respawn;
     // private Renderer rend;
     [SerializeField] private Color checkpointColor = Color.red;
     [SerializeField] private Color baseCheckpointColor = Color.green;
 
     private void Start()
     {
-        //rend = GetComponent<Renderer>();
+        respawn.position = Checkpoint.transform.position;
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
