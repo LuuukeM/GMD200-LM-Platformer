@@ -123,6 +123,56 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &150779324 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2293038791661260057, guid: 32d23b0ab172c734f932e13bdac1a4d0, type: 3}
+  m_PrefabInstance: {fileID: 1854312833407500194}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &150779325
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150779324}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 6cdc917193c49294384886ee33c29980, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0024092197, y: 0.2698354}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.0048184, y: 0.5566989}
+  m_EdgeRadius: 0
 --- !u!1001 &189507030
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3786,6 +3836,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78c1cdce0817eae40a8aea1d0f54c6e6, type: 3}
+--- !u!4 &1028086652 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5196410315612391, guid: 78c1cdce0817eae40a8aea1d0f54c6e6, type: 3}
+  m_PrefabInstance: {fileID: 1028086651}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1137737308
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4258,7 +4313,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -5302,10 +5357,19 @@ PrefabInstance:
       propertyPath: xSpeed
       value: 8
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7546358501797228202, guid: 32d23b0ab172c734f932e13bdac1a4d0, type: 3}
+      propertyPath: respawn
+      value: 
+      objectReference: {fileID: 1028086652}
+    m_RemovedComponents:
+    - {fileID: 2384170632165890732, guid: 32d23b0ab172c734f932e13bdac1a4d0, type: 3}
+    - {fileID: 2599660726036980823, guid: 32d23b0ab172c734f932e13bdac1a4d0, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2293038791661260057, guid: 32d23b0ab172c734f932e13bdac1a4d0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 150779325}
   m_SourcePrefab: {fileID: 100100000, guid: 32d23b0ab172c734f932e13bdac1a4d0, type: 3}
 --- !u!1001 &8869071258235147924
 PrefabInstance:

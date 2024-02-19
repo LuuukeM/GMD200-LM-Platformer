@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SnowScene.unity
     guid: 273c732936e82704ca55ea0b6204c41d
+  - enabled: 1
+    path: Assets/Scenes/GrasslandScene.unity
+    guid: cd30d702f2739fc4b9f470ac1a5b6c80
   m_configObjects: {}
