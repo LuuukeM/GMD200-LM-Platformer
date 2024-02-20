@@ -16,6 +16,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float wallCheckRadius = 1f;
     [SerializeField] private LayerMask wallLayer;
 
+    [SerializeField] private AudioSource jumpSoundEffect;
+    //[SerializeField] private AudioSource landSoundEffect;
+
     private bool isWalled;
     private bool isWallSliding;
     private float wallSlideSpeed;
@@ -77,7 +80,7 @@ public class PlayerMovement : MonoBehaviour
             if (_isGrounded)
             {
                 _rb.AddForce(Vector2.up * jumpForce);
-
+                jumpSoundEffect.Play();
             }
             _shouldJump = false;
         }

@@ -9,6 +9,8 @@ TagManager:
   - Checkpoint
   - TRexUrine
   - Ice Climb
+  - Boulder
+  - AttackArea
   layers:
   - Default
   - TransparentFX
