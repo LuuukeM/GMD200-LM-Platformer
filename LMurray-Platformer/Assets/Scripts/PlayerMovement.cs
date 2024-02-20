@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody2D))]
 
@@ -23,6 +24,11 @@ public class PlayerMovement : MonoBehaviour
     private bool isWalled;
     private bool isWallSliding;
     private float wallSlideSpeed;
+
+    private bool doubleJump;
+    // private bool shouldDoubleJump;
+    private int maxJumps = 2;
+    private int jumpsRemaining;
 
     private bool isWallJumping;
     private float wallJumpingDirection;
@@ -46,6 +52,14 @@ public class PlayerMovement : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
     }
 
+    private void Start()
+    {
+        if (SceneManager.GetActiveScene().name == "FutureScene")
+        {
+            jumpsRemaining = maxJumps;
+        }
+    }
+
     void Update()
     {
         if (!isWallJumping)
@@ -61,10 +75,21 @@ public class PlayerMovement : MonoBehaviour
         }
 
         xMoveInput = Input.GetAxis("Horizontal") * xSpeed;
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (SceneManager.GetActiveScene().name == "FutureScene") 
         {
-            _shouldJump = true;
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                doubleJump = true;
+            }
         }
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                _shouldJump = true;
+            }
+        }
+
         WallSlide();
         WallJump();
     }
@@ -76,7 +101,23 @@ public class PlayerMovement : MonoBehaviour
         _isGrounded = col != null;
         isWalled = col2 != null;
         _rb.velocity = new Vector2(xMoveInput, _rb.velocity.y);
+        if (doubleJump)
+        {
+            if (_isGrounded || doubleJump && jumpsRemaining > 0)
+            {
+                _rb.AddForce(Vector2.up * jumpForce);
+                jumpSoundEffect.Play();
+                jumpsRemaining--;
 
+                doubleJump = !doubleJump;
+            }
+            _shouldJump = false;
+        }
+        if (_isGrounded && !Input.GetButton("Jump"))
+        {
+            doubleJump = false;
+            jumpsRemaining = maxJumps;
+        }
         if (_shouldJump)
         {
             if (_isGrounded)
