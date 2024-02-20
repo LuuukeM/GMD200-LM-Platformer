@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -75,6 +76,7 @@ public class PlayerMovement : MonoBehaviour
         _isGrounded = col != null;
         isWalled = col2 != null;
         _rb.velocity = new Vector2(xMoveInput, _rb.velocity.y);
+
         if (_shouldJump)
         {
             if (_isGrounded)
