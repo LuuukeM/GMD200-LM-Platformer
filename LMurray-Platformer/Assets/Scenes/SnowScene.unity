@@ -455,10 +455,6 @@ PrefabInstance:
       propertyPath: wallLayer.m_Bits
       value: 128
       objectReference: {fileID: 0}
-    - target: {fileID: 2171419978417409039, guid: 051097652c85cee489649a897f61babc, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3405085105832648756, guid: 051097652c85cee489649a897f61babc, type: 3}
       propertyPath: respawn
       value: 
@@ -520,17 +516,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6200000, guid: 6cdc917193c49294384886ee33c29980, type: 2}
     m_RemovedComponents:
-    - {fileID: 7416585540206924850, guid: 051097652c85cee489649a897f61babc, type: 3}
-    - {fileID: 7199178172985273033, guid: 051097652c85cee489649a897f61babc, type: 3}
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6352825826112078727, guid: 051097652c85cee489649a897f61babc, type: 3}
-      insertIndex: -1
+      insertIndex: 8
       addedObject: {fileID: 1121974326}
-    - targetCorrespondingSourceObject: {fileID: 6352825826112078727, guid: 051097652c85cee489649a897f61babc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1121974334}
   m_SourcePrefab: {fileID: 100100000, guid: 051097652c85cee489649a897f61babc, type: 3}
 --- !u!1 &200425591
 GameObject:
@@ -3457,51 +3449,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2106528004054a24b907ba77f81f7d6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!61 &1121974334
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1121974319}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 6cdc917193c49294384886ee33c29980, type: 2}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.27784067}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.5332277}
-  m_EdgeRadius: 0
 --- !u!1 &1304955671
 GameObject:
   m_ObjectHideFlags: 0
