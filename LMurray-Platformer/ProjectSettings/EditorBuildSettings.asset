@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FutureScene.unity
     guid: 37536b9c035e35d4e99737edef117624
+  - enabled: 1
+    path: Assets/Scenes/EndScene.unity
+    guid: 0f8f4857d0ba95a42953e68cc9bf7acf
   m_configObjects: {}

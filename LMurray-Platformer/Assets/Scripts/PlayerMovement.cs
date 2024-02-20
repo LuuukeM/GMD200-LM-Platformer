@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
     private float wallSlideSpeed;
 
     private bool doubleJump;
-    // private bool shouldDoubleJump;
+    private float doubleJumpPower = 12f;
     private int maxJumps = 2;
     private int jumpsRemaining;
 
@@ -105,7 +105,8 @@ public class PlayerMovement : MonoBehaviour
         {
             if (_isGrounded || doubleJump && jumpsRemaining > 0)
             {
-                _rb.AddForce(Vector2.up * jumpForce);
+                _rb.velocity = new Vector2(_rb.velocity.x, doubleJump ? doubleJumpPower : jumpForce);
+                //_rb.AddForce(Vector2.up * jumpForce);
                 jumpSoundEffect.Play();
                 jumpsRemaining--;
 

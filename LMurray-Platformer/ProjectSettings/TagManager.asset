@@ -11,6 +11,7 @@ TagManager:
   - Ice Climb
   - Boulder
   - AttackArea
+  - Bubble
   layers:
   - Default
   - TransparentFX

@@ -9,6 +9,7 @@ public class PlayerRespawn : MonoBehaviour
     // private Renderer rend;
     [SerializeField] private Color checkpointColor = Color.red;
     [SerializeField] private Color baseCheckpointColor = Color.green;
+    [SerializeField] private AudioSource deathSoundEffect;
 
     private void Start()
     {
@@ -20,6 +21,7 @@ public class PlayerRespawn : MonoBehaviour
         {
             //Respawn();
             transform.position = respawn.transform.position;
+            deathSoundEffect.Play();
         }
         else if (other.gameObject.CompareTag("Checkpoint"))
         {
@@ -27,6 +29,16 @@ public class PlayerRespawn : MonoBehaviour
             respawn = other.transform;
             Checkpoint = other.gameObject;
             other.GetComponent<SpriteRenderer>().color = checkpointColor;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Bubble"))
+        {
+            //Respawn();
+            transform.position = respawn.transform.position;
+            deathSoundEffect.Play();
         }
     }
 }
