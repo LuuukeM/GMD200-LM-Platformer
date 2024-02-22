@@ -20,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private AudioSource jumpSoundEffect;
     //[SerializeField] private AudioSource landSoundEffect;
 
+    [SerializeField] private PauseMenu pauseMenu;
+
     private bool isWalled;
     private bool isWallSliding;
     private float wallSlideSpeed;
@@ -73,21 +75,25 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        xMoveInput = Input.GetAxis("Horizontal") * xSpeed;
-        if (SceneManager.GetActiveScene().name == "FutureScene") 
+        if (!pauseMenu.paused)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            xMoveInput = Input.GetAxis("Horizontal") * xSpeed;
+            if (SceneManager.GetActiveScene().name == "FutureScene")
             {
-                doubleJump = true;
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    doubleJump = true;
+                }
+            }
+            else
+            {
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    _shouldJump = true;
+                }
             }
         }
-        else
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                _shouldJump = true;
-            }
-        }
+
 
         WallSlide();
         WallJump();
